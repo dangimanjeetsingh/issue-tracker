@@ -1,0 +1,213 @@
+/* Reset some default browser spacing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #0f172a;
+  padding: 16px 24px;
+}
+
+.navbar-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.brand-link {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.page-container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+.dashboard-layout,
+.project-page-layout {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h2,
+.page-top-bar h1 {
+  margin-bottom: 16px;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.form input,
+.form textarea,
+.form select,
+.issue-actions input,
+.issue-actions select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.primary-button,
+.secondary-button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: #2563eb;
+  color: white;
+}
+
+.secondary-button {
+  background-color: #0f172a;
+  color: white;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.project-list,
+.issue-list {
+  display: grid;
+  gap: 16px;
+}
+
+.project-card {
+  display: block;
+  border: 1px solid #dbe4f0;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #f8fbff;
+  color: #1f2937;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  margin-bottom: 8px;
+}
+
+.issue-card {
+  border: 1px solid #dbe4f0;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #fcfdff;
+}
+
+.issue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.issue-description {
+  margin-bottom: 12px;
+}
+
+.issue-meta {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.issue-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.status-open {
+  background-color: #dc2626;
+}
+
+.status-in-progress {
+  background-color: #d97706;
+}
+
+.status-closed {
+  background-color: #16a34a;
+}
+
+.page-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.back-link {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.muted-text {
+  color: #64748b;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 0 12px 24px;
+  }
+
+  .brand-link {
+    font-size: 20px;
+  }
+}
