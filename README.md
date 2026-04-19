@@ -1,6 +1,6 @@
-# Mini Jira - MERN Issue Tracking Web Application
+# Trackish - MERN Issue Tracking Platform
 
-This is a simple **MERN stack Issue Tracking System** built for learning.
+Trackish is a modern **MERN issue tracking platform** with role-based authentication, admin analytics, deadline tracking, and user assignment workflows.
 
 The main goal of this project is:
 

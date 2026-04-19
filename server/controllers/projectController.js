@@ -1,4 +1,5 @@
 const Project = require("../models/Project");
+const Issue = require("../models/Issue");
 
 // Create a new project and save it in MongoDB.
 const createProject = async (req, res) => {
@@ -33,8 +34,25 @@ const getProjects = async (req, res) => {
   }
 };
 
+const deleteProject = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedProject = await Project.findByIdAndDelete(id);
+    if (!deletedProject) {
+      return res.status(404).json({ message: "Project not found." });
+    }
+
+    // Delete all issues under this project as well.
+    await Issue.deleteMany({ projectId: id });
+    res.json({ message: "Project and related issues deleted successfully." });
+  } catch (error) {
+    res.status(500).json({ message: "Unable to delete project.", error: error.message });
+  }
+};
+
 module.exports = {
   createProject,
-  getProjects
+  getProjects,
+  deleteProject
 };
 

@@ -36,11 +36,17 @@ const issueSchema = new mongoose.Schema({
     default: "open"
   },
 
-  // assignedTo is just a simple text field because there is no authentication system.
+  // deadline is set by admin to track due date.
+  deadline: {
+    type: Date,
+    default: null
+  },
+
+  // assignedTo points to a real user account.
   assignedTo: {
-    type: String,
-    trim: true,
-    default: ""
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    default: null
   },
 
   // projectId connects this issue to one project.
